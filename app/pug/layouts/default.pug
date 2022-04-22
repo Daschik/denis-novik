@@ -1,0 +1,118 @@
+-var cmsTpl = '/'
+
+mixin svg(id,cls)
+    -var cls = cls ? ' ' + cls : ''
+    svg(class='icon icon-' + id + cls width="100%" height="100%" xmlns="http://www.w3.org/2000/svg")
+        use(xlink:href=cmsTpl + 'images/svg/sprite.svg#' + id)
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='css/main.css')
+  link(rel='stylesheet' href=cmsTpl + 'css/vendor.min.css')
+  link(rel='stylesheet' href=cmsTpl + 'css/common.min.css')
+  title Document
+header.header.container
+  .nav.nav-menu
+    ul.nav-menu-list
+      li.menu-item
+        a.menu-link.active(href='#') Home
+      li.menu-item
+        a.menu-link(href='#') About me
+      li.menu-item
+        a.menu-link(href='#') Skills
+      li.menu-item
+        a.menu-link(href='#') Portfolio
+      li.menu-item
+        a.menu-link(href='#') Contacts
+  hr.hr-line
+.banner-title.container
+  .banner-title-block
+    h1.title-banner
+      | Denis 
+      br
+      |                 Novik
+    p
+      | UX | UI designer 
+      br
+      |                 24 years old, Minsk
+    <span> <span class="ru"> RU </span> | ENG </span>
+  .banner-title-image
+    img(src='images/denis.png' alt='')
+.about-me
+  .container
+    h2.about-title
+      | About me
+    .text-center
+      p
+        | Hi, I&apos;m Denis &ndash; UX/UI designer from Minsk.
+        | I&apos;m interested in design and everything connected with it.
+      p
+        | I&apos;m studying at courses &quot;Web and mobile design
+        | interfaces&quot; in IT-Academy.
+      p
+        | Ready to implement excellent projects
+        | with wonderful people.
+.skills
+  .container
+    h2 Skills
+    p I work in such programs as
+    ul.skill-list
+      li.skill-list-item
+        img.skill-list-item-img(src='images/PS.png' alt='')
+        span
+          | Adobe
+          | Photoshop
+        img(src='img/group.png' alt='')
+      li.skill-list-item
+        img.skill-list-item-img(src='images/AI.png' alt='')
+        span
+          | Adobe
+          | Ilustrator
+        img(src='img/group.png' alt='')
+      li.skill-list-item
+        img.skill-list-item-img(src='images/AE.png' alt='')
+        span
+          | Adobe
+          | Affter Effect
+        img(src='img/group.png' alt='')
+      li.skill-list-item
+        img.skill-list-item-img.figma(src='images/Figma.png' alt='')
+        span Figma
+        img(src='img/group.png' alt='')
+.portfolio
+  .container
+    h2.portfolio-title
+      | Portfolio
+    .portfolio-images
+      img(src='images/1.png' alt='')
+      a.link(href='#') Online fashion store - Homepage
+      img(src='images/2.png' alt='')
+      a.link(href='#') Reebok Store - Concept
+      img(src='/images/3.png' alt='')
+      a.link(href='#') Braun Landing Page - Concept
+.contact
+  .container
+    h2 Contacts
+    p
+      | Want to know more or just chat?
+      | You are welcome!
+    a.link-button(href='#') Send message
+    ul.contact-list
+      li.li-item
+        img(src='images/in.png' alt='')
+      li.li-item
+        img(src='images/inst.png' alt='')
+      li.li-item
+        img(src='images/behance.png' alt='')
+      li.li-item
+        img(src='images/asd.png' alt='')
+    span
+      | Like me on 
+      br
+      | LinkedIn, Instagram, Behance, Dribble
+      
+    script(src=cmsTpl + 'js/vendor.min.js')
+    script(src=cmsTpl + 'js/common.min.js')
